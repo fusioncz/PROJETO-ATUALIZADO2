@@ -1,0 +1,336 @@
+/* ============================================================
+   RUAN INSULFILM - CADASTRO MODERNO (COLUNA ÚNICA CENTRALIZADA)
+   ============================================================ */
+
+   :root {
+    --gold: #d4af37;
+    --gold-light: #f1d675;
+    --gold-dark: #9b781c;
+
+    --bg: #070707;
+    --card: #141418;
+    --card-2: #101014;
+    --input-bg: #1e1e24;
+
+    --text: #f5f5f5;
+    --text-secondary: #a9a9a9;
+    --text-muted: #777777;
+
+    --border: rgba(212, 175, 55, 0.25);
+    --border-strong: rgba(212, 175, 55, 0.70);
+    --shadow: rgba(0, 0, 0, 0.65);
+
+    --font-main: "Montserrat", sans-serif;
+    --font-title: "Cinzel", serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-main);
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+header {
+    width: 100%;
+}
+
+/* ============================================================
+   CONTAINER E CARD CENTRALIZADO
+   ============================================================ */
+
+.login-page {
+    flex: 1;
+    width: 100%;
+    max-width: 490px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-card {
+    width: 100%;
+    padding: 42px 38px;
+    background: linear-gradient(160deg, var(--card), var(--card-2));
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: 0 22px 55px var(--shadow);
+}
+
+/* ============================================================
+   CABEÇALHO
+   ============================================================ */
+
+.login-header {
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+}
+
+.login-header h1 {
+    margin: 0 0 8px;
+    color: var(--text);
+    font-family: var(--font-title);
+    font-size: 1.65rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.login-header p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 0.82rem;
+    line-height: 1.5;
+}
+
+/* ============================================================
+   FORMULÁRIO VERTICAL LIMPO E BEM ESPAÇADO
+   ============================================================ */
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 6px;
+    color: var(--text-secondary);
+    font-size: 0.74rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.form-group label span {
+    color: var(--gold);
+}
+
+/* ============================================================
+   INPUTS MODERNOS
+   ============================================================ */
+
+.input-box {
+    position: relative;
+    width: 100%;
+}
+
+.input-box > i {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    color: var(--gold);
+    font-size: 0.85rem;
+    pointer-events: none;
+}
+
+.input-box input,
+.input-box select {
+    width: 100%;
+    height: 48px;
+    padding: 12px 16px 12px 42px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    outline: none;
+    background: var(--input-bg);
+    color: var(--text);
+    font-family: var(--font-main);
+    font-size: 0.84rem;
+    transition: all 0.2s ease;
+}
+
+.input-box input::placeholder {
+    color: #8a8a93;
+}
+
+.input-box input:hover,
+.input-box select:hover {
+    border-color: rgba(212, 175, 55, 0.45);
+}
+
+.input-box input:focus,
+.input-box select:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.14);
+}
+
+/* ============================================================
+   VALIDAÇÃO EM TEMPO REAL
+   ============================================================ */
+
+.input-box input.is-invalid,
+.input-box select.is-invalid {
+    border-color: rgba(220, 53, 69, 0.85) !important;
+    box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.15) !important;
+}
+
+.input-box input.is-valid,
+.input-box select.is-valid {
+    border-color: rgba(40, 167, 69, 0.85) !important;
+    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.15) !important;
+}
+
+.form-group small {
+    margin-top: 5px;
+    margin-left: 2px;
+    color: var(--text-muted);
+    font-size: 0.68rem;
+    line-height: 1.4;
+}
+
+.form-group small.error-feedback {
+    color: #ff6b6b;
+    font-weight: 600;
+}
+
+.form-group small.success-feedback {
+    color: #51cf66;
+    font-weight: 600;
+}
+
+/* ============================================================
+   TERMOS E BOTÃO
+   ============================================================ */
+
+.terms-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 4px 0 6px;
+    font-size: 0.76rem;
+    color: var(--text-secondary);
+}
+
+.terms-group input[type="checkbox"] {
+    accent-color: var(--gold);
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.terms-group a {
+    color: var(--gold);
+    text-decoration: underline;
+}
+
+.btn-gold {
+    width: 100%;
+    height: 50px;
+    margin-top: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 1px solid var(--gold);
+    border-radius: 10px;
+    background: var(--gold);
+    color: #000;
+    font-family: var(--font-main);
+    font-size: 0.86rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-gold:hover {
+    background: var(--gold-light);
+    border-color: var(--gold-light);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.25);
+}
+
+/* ============================================================
+   VOLTAR
+   ============================================================ */
+
+.back-home {
+    margin-top: 24px;
+    padding-top: 18px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.back-home a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--text-secondary);
+    font-size: 0.76rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.back-home a:hover {
+    color: var(--gold);
+}
+
+/* ============================================================
+   LIGHT MODE (.light-mode via JavaScript)
+   ============================================================ */
+
+body.light-mode {
+    --bg: #f3f3f3;
+    --card: #ffffff;
+    --card-2: #fafafa;
+    --input-bg: #f5f5f7;
+    --text: #181818;
+    --text-secondary: #555555;
+    --text-muted: #777777;
+    --gold: #b8972e;
+    --gold-light: #d4af37;
+    --gold-dark: #826315;
+    --border: rgba(156, 124, 31, 0.35);
+    --border-strong: rgba(156, 124, 31, 0.65);
+    --shadow: rgba(0, 0, 0, 0.12);
+}
+
+body.light-mode .input-box input,
+body.light-mode .input-box select {
+    border-color: rgba(0, 0, 0, 0.12);
+    color: #181818;
+}
+
+body.light-mode .back-home {
+    border-top-color: rgba(0, 0, 0, 0.09);
+}
+
+body.light-mode .form-group small.error-feedback {
+    color: #c92a2a;
+}
+
+body.light-mode .form-group small.success-feedback {
+    color: #2b8a3e;
+}
+
+@media (max-width: 520px) {
+    .login-page {
+        padding: 20px 12px;
+    }
+
+    .login-card {
+        padding: 28px 20px;
+    }
+}

@@ -1,0 +1,238 @@
+/* ============================================================
+   ESTILO DO TOPO (TÍTULO DOURADO, MAIOR E SEM CAIXA DE FUNDO)
+   ============================================================ */
+
+   .inner-main > .inner-hero {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 2.5rem 0 1.5rem 0 !important;
+    text-align: left !important;
+}
+
+.inner-main > .inner-hero h1 {
+    font-family: var(--font-title);
+    font-size: clamp(2.2rem, 4vw, 3.2rem) !important;
+    color: var(--gold) !important; /* Deixa o título dourado */
+    margin: 0 0 0.5rem 0 !important;
+    font-weight: 800;
+}
+
+.inner-main > .inner-hero p {
+    font-size: 1.05rem !important;
+    color: var(--text-secondary);
+    max-width: 800px;
+    margin: 0 !important;
+    line-height: 1.6;
+}
+
+.contact-layout-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.25fr;
+    gap: 2rem;
+    align-items: start;
+    margin-top: 2rem;
+}
+
+/* ============================================================
+   FORMULÁRIO LATERAL ("ENVIE SUA MENSAGEM")
+   ============================================================ */
+
+.contact-form-box {
+    background: linear-gradient(145deg, var(--card), var(--card-2));
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 18px 45px var(--shadow);
+}
+
+.contact-form-box h2 {
+    font-family: var(--font-title);
+    font-size: 1.35rem;
+    color: var(--text-primary);
+    margin: 0 0 0.3rem 0;
+}
+
+.contact-form-box p {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    margin: 0 0 1.5rem 0;
+    line-height: 1.5;
+}
+
+.form-group-contact {
+    margin-bottom: 1.1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group-contact label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.4rem;
+}
+
+.form-group-contact input,
+.form-group-contact textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    color: var(--text-primary);
+    font-family: var(--font-main);
+    font-size: 0.82rem;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.form-group-contact input::placeholder,
+.form-group-contact textarea::placeholder {
+    color: var(--text-muted);
+}
+
+.form-group-contact input:hover,
+.form-group-contact textarea:hover {
+    border-color: var(--border-strong);
+}
+
+.form-group-contact input:focus,
+.form-group-contact textarea:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.12);
+}
+
+.form-group-contact textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+.contact-submit-btn {
+    width: 100%;
+    min-height: 46px;
+    margin-top: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    border: none;
+    background: linear-gradient(
+        110deg,
+        var(--gold-light) 0%,
+        var(--gold) 35%,
+        var(--gold-dark) 70%,
+        #3c3527 100%
+    );
+    color: #111;
+    font-family: var(--font-main);
+    font-size: 0.80rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-submit-btn:hover {
+    background: linear-gradient(
+        110deg,
+        #ffffff 0%,
+        var(--gold-light) 35%,
+        var(--gold) 70%,
+        var(--gold-dark) 100%
+    );
+    box-shadow: 0 0 14px rgba(212, 175, 55, 0.35);
+    transform: translateY(-1px);
+    color: #111;
+}
+
+/* ============================================================
+   SEÇÃO "CONTATO E LOCALIZAÇÃO" E CARDS
+   ============================================================ */
+
+.contact-info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-header-block {
+    margin-bottom: 0.25rem;
+}
+
+/* Título dimensionado exatamente igual à referência */
+.contact-section-title {
+    font-family: var(--font-main);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+    letter-spacing: -0.01em;
+}
+
+/* ============================================================
+   AJUSTE DA GRELHA E DOS CARDS DE CONTATO
+   ============================================================ */
+
+   .contact-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.contact-card-box {
+    background: linear-gradient(145deg, var(--card), var(--card-2));
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.2rem;
+    display: flex;
+    align-items: flex-start; /* Garante que o ícone e o texto alinham pelo topo */
+    gap: 1rem;
+    box-shadow: 0 4px 16px var(--shadow);
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.contact-card-box:hover {
+    border-color: var(--border-strong);
+    transform: translateY(-2px);
+}
+
+.contact-card-full {
+    grid-column: span 2;
+}
+
+.contact-card-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    border-radius: 10px;
+    background: rgba(212, 175, 55, 0.08);
+    border: 1px solid var(--gold-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.contact-card-content {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.contact-card-content h4 {
+    margin: 0 0 0.2rem 0;
+    font-family: var(--font-main);
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.contact-card-content p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    line-height: 1.45;
+    word-break: break-word;
+}

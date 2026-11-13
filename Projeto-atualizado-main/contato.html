@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUAN FILM - Contato</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800;900&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="contato.css">
+</head>
+<body>
+    <input type="checkbox" id="theme-toggle" class="css-control">
+    <input type="radio" name="font-size" id="font-size-1" class="css-control">
+    <input type="radio" name="font-size" id="font-size-2" class="css-control">
+    <input type="radio" name="font-size" id="font-size-3" class="css-control">
+    <input type="radio" name="font-size" id="font-size-4" class="css-control" checked>
+    <input type="radio" name="font-size" id="font-size-5" class="css-control">
+    <input type="radio" name="font-size" id="font-size-6" class="css-control">
+    <input type="radio" name="font-size" id="font-size-7" class="css-control">
+    <input type="checkbox" id="menu-toggle" class="css-control">
+
+    <header>
+        <div class="accessibility-bar">
+            <div class="accessibility-info">
+                <span><i class="fa-solid fa-phone gold-text"></i>(21) 9 7066-2286</span>
+                <span class="desktop-only"><i class="fa-brands fa-instagram gold-text"></i>@ruan.film</span>
+                <span class="desktop-large-only"><i class="fa-solid fa-location-dot gold-text"></i>Atendimento no Rio de Janeiro</span>
+            </div>
+            <div class="accessibility-controls">
+                <label for="theme-toggle" class="access-btn theme-button" aria-label="Alternar tema claro/escuro">
+                    <i class="fa-solid fa-sun theme-icon-light"></i>
+                    <i class="fa-solid fa-moon theme-icon-dark"></i>
+                </label>
+                <div class="font-controls">
+                    <label for="font-size-3" class="access-btn">A-</label>
+                    <label for="font-size-4" class="access-btn">A</label>
+                    <label for="font-size-5" class="access-btn">A+</label>
+                </div>
+            </div>
+        </div>
+
+        <nav class="app-navbar">
+            <div class="navbar-container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/logo/ruaninsulfilmlogo.png" alt="Ruan Film" class="brand-image">
+                </a>
+
+                <label for="menu-toggle" class="navbar-toggler">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+
+                <div class="navbar-menu">
+                    <ul class="navbar-nav">
+                        <li><a href="index.html" class="nav-link-custom"><i class="fa-solid fa-house"></i>Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a href="insulfilm.html" class="nav-link-custom" aria-haspopup="true">
+                                <i class="fa-solid fa-plug"></i>
+                                Insulfilm
+                                <i class="fa-solid fa-chevron-down dropdown-chevron"></i>
+                            </a>
+                            <ul class="submenu">
+                                <li><a href="insulfilm.html#residencial">Residencial</a></li>
+                                <li><a href="insulfilm.html#automotivo">Automotivo</a></li>
+                                <li><a href="insulfilm.html#seguranca">Para Segurança</a></li>
+                                <li><a href="insulfilm.html#comercial">Comercial</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="outros-servicos.html" class="nav-link-custom" aria-haspopup="true">
+                                <i class="fa-solid fa-shield-cat"></i>
+                                Outros Serviços
+                                <i class="fa-solid fa-chevron-down dropdown-chevron"></i>
+                            </a>
+                            <ul class="submenu">
+                                <li><a href="outros-servicos.html#ppf">PPF (Paint Protection Film)</a></li>
+                                <li><a href="outros-servicos.html#envelopamento">Envelopamento Veicular</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="galeria.html" class="nav-link-custom"><i class="fa-solid fa-sun"></i>Galeria</a></li>
+                        <li><a href="contato.html" class="nav-link-custom active"><i class="fa-solid fa-envelope"></i>Contato</a></li>
+                    </ul>
+                    <div class="navbar-actions">
+                        <a href="login.html" class="btn-gold">Login / Cadastro</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="inner-main">
+        <section class="inner-hero">
+            <h1>Fale com a gente</h1>
+            <p>Estamos sempre prontos para lidar com suas dúvidas e fornecer conhecimento completo sobre as películas.</p>
+        </section>
+
+        <div class="contact-layout-grid">
+            <!-- Formulário de Envie sua Mensagem -->
+            <section class="contact-form-box">
+                <h2>Envie sua mensagem</h2>
+                <p>Responderemos o mais rápido possível.</p>
+                <form action="#" method="post">
+                    <div class="form-group-contact">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                    </div>
+                    <div class="form-group-contact">
+                        <label for="telefone_contato">Telefone / WhatsApp</label>
+                        <input type="text" id="telefone_contato" name="telefone_contato" placeholder="(21) 97066-2286" required>
+                    </div>
+                    <div class="form-group-contact">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" placeholder="Escreva sua dúvida ou solicitação de orçamento..." required></textarea>
+                    </div>
+                    <button type="submit" class="contact-submit-btn">Enviar Mensagem</button>
+                </form>
+            </section>
+
+            <!-- Grid de Contato e Localização com os Cards -->
+            <div class="contact-info-section">
+                <div class="contact-header-block">
+                    <h3 class="contact-section-title">Contato e localização</h3>
+                </div>
+                
+                <div class="contact-cards-grid">
+                    <!-- Card WhatsApp -->
+                    <div class="contact-card-box">
+                        <div class="contact-card-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                        <div class="contact-card-content">
+                            <h4>WhatsApp</h4>
+                            <p>(21) 97066-2286</p>
+                        </div>
+                    </div>
+
+                    <!-- Card Instagram (Movido para o lugar do telefone) -->
+                    <div class="contact-card-box">
+                        <div class="contact-card-icon"><i class="fa-brands fa-instagram"></i></div>
+                        <div class="contact-card-content">
+                            <h4>Instagram</h4>
+                            <p>@ruan.film23</p>
+                        </div>
+                    </div>
+
+                    <!-- Card Endereço -->
+                    <div class="contact-card-box contact-card-full">
+                        <div class="contact-card-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="contact-card-content">
+                            <h4>Endereço</h4>
+                            <p>Rua José Gonçalves - 32, Rio de Janeiro/RJ • CEP 21853-340</p>
+                        </div>
+                    </div>
+
+                    <!-- Card Dias e Horários -->
+                    <div class="contact-card-box contact-card-full">
+                        <div class="contact-card-icon"><i class="fa-regular fa-clock"></i></div>
+                        <div class="contact-card-content">
+                            <h4>Dias e Horários</h4>
+                            <p>Segunda a sábado, das 7h às 23h e domingo até as 17h.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card Telefone (Movido para o lugar do instagram e ajustado para largura total) -->
+                    <div class="contact-card-box contact-card-full">
+                        <div class="contact-card-icon"><i class="fa-solid fa-phone"></i></div>
+                        <div class="contact-card-content">
+                            <h4>Telefone</h4>
+                            <p>(21) 0000-0000</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3>RUAN FILM</h3>
+                <p>Proteção, Privacidade e Economia</p>
+            </div>
+            <div class="footer-social">
+                <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="E-mail"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <div class="footer-copy"><span>© 2026 RUAN FILM - Rio de Janeiro</span></div>
+        </div>
+    </footer>
+<script src="darkmode.js"></script>
+</body>
+</html>

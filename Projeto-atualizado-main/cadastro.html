@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUAN INSULFILM - Cadastro</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800;900&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+
+<body>
+    <input type="checkbox" id="theme-toggle" class="css-control">
+    <input type="radio" name="font-size" id="font-size-1" class="css-control">
+    <input type="radio" name="font-size" id="font-size-2" class="css-control">
+    <input type="radio" name="font-size" id="font-size-3" class="css-control">
+    <input type="radio" name="font-size" id="font-size-4" class="css-control" checked>
+    <input type="radio" name="font-size" id="font-size-5" class="css-control">
+    <input type="radio" name="font-size" id="font-size-6" class="css-control">
+    <input type="radio" name="font-size" id="font-size-7" class="css-control">
+    <input type="checkbox" id="menu-toggle" class="css-control">
+
+    <header>
+        <div class="accessibility-bar">
+            <div class="accessibility-info">
+                <span><i class="fa-solid fa-phone gold-text"></i>(21) 9 7066-2286</span>
+                <span class="desktop-only"><i class="fa-brands fa-instagram gold-text"></i>@ruan.film23</span>
+                <span class="desktop-large-only"><i class="fa-solid fa-location-dot gold-text"></i>Atendimento no Rio de Janeiro</span>
+            </div>
+
+            <div class="accessibility-controls">
+                <label for="theme-toggle" class="access-btn theme-button" aria-label="Alternar tema claro/escuro">
+                    <i class="fa-solid fa-sun theme-icon-light"></i>
+                    <i class="fa-solid fa-moon theme-icon-dark"></i>
+                </label>
+
+                <div class="font-controls">
+                    <div class="font-step font-step-decrease">
+                        <label for="font-size-3" class="access-btn">A-</label>
+                        <label for="font-size-2" class="access-btn">A-</label>
+                        <label for="font-size-1" class="access-btn">A-</label>
+                        <label for="font-size-1" class="access-btn disabled-control">A-</label>
+                    </div>
+
+                    <label for="font-size-4" class="access-btn font-reset">A</label>
+
+                    <div class="font-step font-step-increase">
+                        <label for="font-size-5" class="access-btn">A+</label>
+                        <label for="font-size-6" class="access-btn">A+</label>
+                        <label for="font-size-7" class="access-btn">A+</label>
+                        <label for="font-size-7" class="access-btn disabled-control">A+</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="login-page">
+        <section class="login-card">
+            <div class="login-header">
+                <h1>Cadastro de Usuário</h1>
+                <p>Preencha os dados abaixo para criar seu cadastro.</p>
+            </div>
+
+            <form class="login-form" action="#" method="post">
+                <div class="form-group">
+                    <label for="nome">Nome Completo <span>*</span></label>
+                    <div class="input-box">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" minlength="15" maxlength="80" required>
+                    </div>
+                    <small>Mínimo de 15 caracteres alfabéticos.</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="nascimento">Data de Nascimento <span>*</span></label>
+                    <div class="input-box">
+                        <i class="fa-solid fa-calendar"></i>
+                        <input type="date" id="nascimento" name="nascimento" required>
+                    </div>
+                    <small></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="sexo">Sexo <span>*</span></label>
+                    <div class="input-box">
+                        <i class="fa-solid fa-venus-mars"></i>
+                        <select id="sexo" name="sexo" required>
+                            <option value="">Selecione...</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="feminino">Feminino</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+                    <small></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="nome_mae">Nome Materno <span>*</span></label>
+                    <div class="input-box">
+                        <i class="fa-solid fa-person-breastfeeding"></i>
+                        <input type="text" id="nome_mae" name="nome_mae" placeholder="Nome completo da mãe" minlength="15" maxlength="80" required>
+                    </div>
+                    <small></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="cpf">CPF <span>*</span></label>
+                    <div class="input-box">
+                        <i class="fa-solid fa-id-card"></i>
+                        <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" maxlength="14" required>
+                    </div>
+                    <small></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="celular">Telefone Celular <span>*</span></label>
+                    <div class="input-box">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                        <input type="text" id="celular" name="celular" placeholder="(+55)21-999999999" required>
+                    </div>
+                    <small></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefone">Telefone Fixo <span>*</span></label>
+                    <div class="input-box">
+                        <i class="fa-solid fa-phone"></i>
+                        <input type="text" id="telefone" name="telefone" placeholder="(+55)21-22223333" required>
+                    </div>
+                    <small></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="cep">CEP <span>*</span></label>
+                    <div class="input-box">
+                        <i class="fa-solid fa-map-pin"></i>
+                        <input type="text" id="cep" name="cep" placeholder="00000-000" maxlength="9" required>
+                    </div>
+                    <small></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="endereco">Endereço Completo <span>*</span></label>
+                    <div class="input-box">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <input type="text" id="endereco" name="endereco" placeholder="Rua, Bairro, Cidade - Estado" required>
+                    </div>
+                    <small></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="numero">Número <span>*</span></label>
+                    <div class="input-box">
+                        <i class="fa-solid fa-hashtag"></i>
+                        <input type="text" id="numero" name="numero" placeholder="Digite o número" required>
+                    </div>
+                    <small></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="login">Login <span>*</span></label>
+                    <div class="input-box">
+                        <i class="fa-solid fa-user-check"></i>
+                        <input type="text" id="login" name="login" placeholder="6 letras" minlength="6" maxlength="6" pattern="[A-Za-z]{6}" required>
+                    </div>
+                    <small>Informe exatamente 6 caracteres alfabéticos.</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="senha">Senha <span>*</span></label>
+                    <div class="input-box">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="senha" name="senha" placeholder="8 letras" minlength="8" maxlength="8" pattern="[A-Za-z]{8}" required>
+                    </div>
+                    <small>Informe exatamente 8 caracteres alfabéticos.</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmar_senha">Confirmação de Senha <span>*</span></label>
+                    <div class="input-box">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <input type="password" id="confirmar_senha" name="confirmar_senha" placeholder="Digite a senha novamente" minlength="8" maxlength="8" required>
+                    </div>
+                    <small></small>
+                </div>
+
+                <div class="terms-group">
+                    <input type="checkbox" id="termos" required>
+                    <label for="termos">Eu concordo com os <a href="#">Termos de Uso</a></label>
+                </div>
+
+                <button type="submit" class="btn-gold">
+                    <i class="fa-solid fa-user-plus"></i> Cadastrar Usuário
+                </button>
+            </form>
+
+            <div class="back-home">
+                <a href="index.html">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Voltar
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <script src="darkmode.js"></script>
+    <script src="validacao.js"></script>
+</body>
+</html>

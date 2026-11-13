@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RUAN INSULFILM - Recupere sua Senha</title>
+
+    <!-- Font Awesome - somente CSS -->
+    <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Google Fonts - somente CSS -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800;900&family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="recuperarsenha.css">
+</head>
+
+<body>
+    <input type="checkbox" id="theme-toggle" class="css-control">
+    <input type="radio" name="font-size" id="font-size-1" class="css-control">
+    <input type="radio" name="font-size" id="font-size-2" class="css-control">
+    <input type="radio" name="font-size" id="font-size-3" class="css-control">
+    <input type="radio" name="font-size" id="font-size-4" class="css-control" checked>
+    <input type="radio" name="font-size" id="font-size-5" class="css-control">
+    <input type="radio" name="font-size" id="font-size-6" class="css-control">
+    <input type="radio" name="font-size" id="font-size-7" class="css-control">
+
+    <header>
+        <div class="accessibility-bar">
+            <div class="accessibility-info">
+                <span><i class="fa-solid fa-phone gold-text"></i>(21) 9 7066-2286</span>
+                <span class="desktop-only"><i class="fa-brands fa-instagram gold-text"></i>@ruan.film23</span>
+                <span class="desktop-large-only"><i class="fa-solid fa-location-dot gold-text"></i>Atendimento no Rio de Janeiro</span>
+            </div>
+            <div class="accessibility-controls">
+                <label for="theme-toggle" class="access-btn theme-button" aria-label="Alternar tema claro/escuro">
+                    <i class="fa-solid fa-sun theme-icon-light"></i>
+                    <i class="fa-solid fa-moon theme-icon-dark"></i>
+                </label>
+                <div class="font-controls">
+                    <div class="font-step font-step-decrease">
+                        <label for="font-size-3" class="access-btn">A-</label>
+                        <label for="font-size-2" class="access-btn">A-</label>
+                        <label for="font-size-1" class="access-btn">A-</label>
+                        <label for="font-size-1" class="access-btn disabled-control">A-</label>
+                    </div>
+                    <label for="font-size-4" class="access-btn font-reset">A</label>
+                    <div class="font-step font-step-increase">
+                        <label for="font-size-5" class="access-btn">A+</label>
+                        <label for="font-size-6" class="access-btn">A+</label>
+                        <label for="font-size-7" class="access-btn">A+</label>
+                        <label for="font-size-7" class="access-btn disabled-control">A+</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="login-page">
+
+        <section class="login-card">
+
+            <div class="login-header">
+
+            
+                <h1>Recuperação de Senha</h1>
+            
+                <p>
+                    Insira o seu e-mail de cadastro para continuar
+                </p>
+            
+            </div>
+
+
+            <form class="login-form" action="#" method="post">
+
+                <div class="form-group">
+                    <label for="email" class="form-label">
+                        E-mail <span>*</span>
+                    </label>
+
+                    <div class="input-box">
+                        <i class="fa-solid fa-user"></i>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Digite seu e-mail"
+                            autocomplete="email"
+                            required
+                        >
+                    </div>
+                </div>
+
+
+               
+
+                <button type="submit" class="btn-gold">
+                    Enviar
+                </button>
+
+
+               
+
+            </form>
+
+
+            <div class="back-home">
+                <a href="index.html">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Voltar para a página inicial
+                </a>
+            </div>
+
+        </section>
+
+    </main>
+    <script src="darkmode.js"></script>
+    <script src="validacao.js"></script>
+</body>
+</html>

@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RUAN FILM - Insulfilm</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800;900&amp;family=Montserrat:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="index.css" rel="stylesheet"/>
+<style>
+        /* Conteúdo exclusivo da página Insulfilm */
+        .film-page .inner-hero {
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at 85% 15%, rgba(212,175,55,.16), transparent 35%),
+                linear-gradient(145deg, var(--bg-hero), var(--bg-card));
+        }
+
+        .film-kicker {
+            display: inline-block;
+            margin-bottom: .65rem;
+            color: var(--gold);
+            font-size: .74rem;
+            font-weight: 800;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+        }
+
+        .film-hero-title {
+            margin-bottom: .7rem !important;
+            font-size: clamp(1.8rem, 3.4vw, 2.7rem) !important;
+        }
+
+        .film-hero-title span {
+            color: var(--text-primary);
+        }
+
+        .film-hero-title .gold-line {
+            color: var(--gold);
+            display: block;
+        }
+
+        .film-hero-copy {
+            max-width: 780px !important;
+            margin: 0 !important;
+            font-size: .94rem !important;
+        }
+
+        .film-section {
+            margin-bottom: 1.25rem;
+            padding: 1.25rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            box-shadow: 0 8px 24px var(--shadow);
+            scroll-margin-top: 100px;
+        }
+
+        .film-section-heading {
+            display: flex;
+            align-items: center;
+            gap: .8rem;
+            margin-bottom: 1rem;
+            padding-bottom: .85rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .film-section-heading .section-icon {
+            width: 44px;
+            height: 44px;
+            display: grid;
+            place-items: center;
+            flex: 0 0 44px;
+            border: 1px solid var(--gold-dark);
+            border-radius: 10px;
+            color: var(--gold);
+            font-size: 1.15rem;
+            background: rgba(212,175,55,.06);
+        }
+
+        .film-section-heading h2 {
+            margin: 0;
+            color: var(--text-primary);
+            font-family: var(--font-title);
+            font-size: clamp(1.25rem, 2.3vw, 1.8rem);
+        }
+
+        .film-section-heading p {
+            margin: .2rem 0 0;
+            color: var(--text-secondary);
+            font-size: .78rem;
+        }
+
+        .film-grid {
+            display: grid;
+            gap: .8rem;
+        }
+
+        .film-card {
+            padding: 1rem;
+            border: 1px solid var(--border);
+            border-radius: 11px;
+            background: linear-gradient(145deg, rgba(212,175,55,.04), transparent);
+        }
+
+        .film-card-head {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-bottom: .8rem;
+        }
+
+        .film-card h3 {
+            margin: 0;
+            color: var(--gold);
+            font-family: var(--font-title);
+            font-size: 1rem;
+        }
+
+        .film-card .film-purpose {
+            margin: .25rem 0 0;
+            color: var(--text-secondary);
+            font-size: .76rem;
+            line-height: 1.55;
+        }
+
+        .film-tag {
+            flex-shrink: 0;
+            padding: .28rem .45rem;
+            border: 1px solid var(--gold-dark);
+            border-radius: 999px;
+            color: var(--gold);
+            font-size: .62rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .06em;
+        }
+
+        .film-benefits {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: .65rem;
+        }
+
+        .benefit {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: .55rem;
+            align-items: start;
+            padding: .65rem;
+            border-left: 1px solid var(--border);
+        }
+
+        .benefit:first-child {
+            border-left: 0;
+        }
+
+        .benefit i {
+            color: var(--gold);
+            font-size: .92rem;
+            margin-top: .08rem;
+        }
+
+        .benefit strong {
+            display: block;
+            margin-bottom: .2rem;
+            color: var(--text-primary);
+            font-size: .68rem;
+            text-transform: uppercase;
+            letter-spacing: .02em;
+        }
+
+        .benefit span {
+            color: var(--text-secondary);
+            font-size: .68rem;
+            line-height: 1.45;
+        }
+
+        .safety-panel {
+            padding: 1rem 1.05rem;
+            border: 1px solid var(--gold-dark);
+            border-radius: 11px;
+            background: linear-gradient(145deg, rgba(212,175,55,.08), transparent);
+        }
+
+        .safety-panel h2 {
+            margin: 0 0 .3rem;
+            color: var(--gold);
+            font-family: var(--font-title);
+            font-size: 1.05rem;
+        }
+
+        .safety-panel p {
+            margin: 0 0 .75rem;
+            color: var(--text-secondary);
+            font-size: .74rem;
+        }
+
+        .quality-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: .7rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .quality-card {
+            padding: .9rem;
+            text-align: center;
+            border: 1px solid var(--border);
+            border-radius: 11px;
+            background: var(--bg-card);
+        }
+
+        .quality-card i {
+            display: block;
+            margin-bottom: .45rem;
+            color: var(--gold);
+            font-size: 1.15rem;
+        }
+
+        .quality-card strong {
+            display: block;
+            margin-bottom: .22rem;
+            color: var(--text-primary);
+            font-size: .7rem;
+            text-transform: uppercase;
+        }
+
+        .quality-card span {
+            color: var(--text-secondary);
+            font-size: .66rem;
+            line-height: 1.45;
+        }
+
+
+        .commercial-note {
+            margin-top: 0;
+            padding: .9rem 1rem;
+            border: 1px dashed var(--border);
+            border-radius: 10px;
+            color: var(--text-secondary);
+            background: rgba(255,255,255,.015);
+            font-size: .74rem;
+        }
+
+        .commercial-note strong {
+            color: var(--gold);
+        }
+
+
+        /* Imagens de apoio por aplicação */
+        .film-section-media {
+            margin: 0 0 1rem;
+            overflow: hidden;
+            border: 1px solid var(--gold-dark);
+            border-radius: 13px;
+            background: var(--bg-card);
+            box-shadow: 0 8px 24px var(--shadow);
+        }
+
+        .film-section-media img {
+            display: block;
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .film-section-media figcaption {
+            padding: .55rem .8rem;
+            color: var(--text-secondary);
+            font-size: .68rem;
+            line-height: 1.4;
+            border-top: 1px solid var(--border);
+            background: rgba(212,175,55,.025);
+        }
+
+        .commercial-section {
+            margin-top: 1.25rem;
+        }
+
+        @media (max-width: 600px) {
+            .film-section-media img {
+                height: 220px;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .film-benefits {
+                grid-template-columns: 1fr;
+            }
+            .benefit,
+            .benefit:first-child {
+                border-left: 0;
+                border-top: 1px solid var(--border);
+                padding-top: .7rem;
+            }
+            .benefit:first-child {
+                border-top: 0;
+                padding-top: .1rem;
+            }
+            .quality-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 600px) {
+            .film-page .inner-hero {
+                text-align: center;
+            }
+            .film-hero-copy {
+                margin: 0 auto !important;
+            }
+            .film-section {
+                padding: .9rem;
+            }
+            .film-card-head {
+                flex-direction: column;
+                gap: .5rem;
+            }
+            .quality-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<input class="css-control" id="theme-toggle" type="checkbox"/>
+<input class="css-control" id="font-size-1" name="font-size" type="radio"/>
+<input class="css-control" id="font-size-2" name="font-size" type="radio"/>
+<input class="css-control" id="font-size-3" name="font-size" type="radio"/>
+<input checked="" class="css-control" id="font-size-4" name="font-size" type="radio"/>
+<input class="css-control" id="font-size-5" name="font-size" type="radio"/>
+<input class="css-control" id="font-size-6" name="font-size" type="radio"/>
+<input class="css-control" id="font-size-7" name="font-size" type="radio"/>
+<input class="css-control" id="menu-toggle" type="checkbox"/>
+<header>
+<div class="accessibility-bar">
+<div class="accessibility-info">
+<span><i class="fa-solid fa-phone gold-text"></i>(21) 9 XXXX-XXXX</span>
+<span class="desktop-only"><i class="fa-brands fa-instagram gold-text"></i>@ruan.film</span>
+<span class="desktop-large-only"><i class="fa-solid fa-location-dot gold-text"></i>Atendimento no Rio de Janeiro</span>
+</div>
+<div class="accessibility-controls">
+<label class="access-btn theme-button" for="theme-toggle" aria-label="Alternar tema claro/escuro">
+<i class="fa-solid fa-sun theme-icon-light"></i>
+<i class="fa-solid fa-moon theme-icon-dark"></i>
+</label>
+<div class="font-controls">
+<label class="access-btn" for="font-size-3">A-</label>
+<label class="access-btn" for="font-size-4">A</label>
+<label class="access-btn" for="font-size-5">A+</label>
+</div>
+</div>
+</div>
+<nav class="app-navbar">
+<div class="navbar-container">
+<a class="navbar-brand" href="index.html">
+<img src="img/logo/ruaninsulfilmlogo.png" alt="Ruan Film" class="brand-image"/>
+</a>
+<label class="navbar-toggler" for="menu-toggle">
+<i class="fa-solid fa-bars"></i>
+</label>
+<div class="navbar-menu">
+<ul class="navbar-nav">
+<li><a class="nav-link-custom" href="index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+<li class="nav-item dropdown">
+<a aria-haspopup="true" class="nav-link-custom active" href="insulfilm.html">
+<i class="fa-solid fa-plug"></i>
+                                Insulfilm
+                                <i class="fa-solid fa-chevron-down dropdown-chevron"></i>
+</a>
+<ul class="submenu">
+<li><a href="insulfilm.html#residencial">Residencial</a></li>
+<li><a href="insulfilm.html#automotivo">Automotivo</a></li>
+<li><a href="insulfilm.html#seguranca">Para Segurança</a></li>
+<li><a href="insulfilm.html#comercial">Comercial</a></li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a aria-haspopup="true" class="nav-link-custom" href="outros-servicos.html">
+<i class="fa-solid fa-shield-cat"></i>
+                                Outros Serviços
+                                <i class="fa-solid fa-chevron-down dropdown-chevron"></i>
+</a>
+<ul class="submenu">
+<li><a href="outros-servicos.html#ppf">PPF (Paint Protection Film)</a></li>
+<li><a href="outros-servicos.html#envelopamento">Envelopamento Veicular</a></li>
+</ul>
+</li>
+<li><a class="nav-link-custom" href="galeria.html"><i class="fa-solid fa-sun"></i>Galeria</a></li>
+<li><a class="nav-link-custom" href="contato.html"><i class="fa-solid fa-envelope"></i>Contato</a></li>
+</ul>
+<div class="navbar-actions">
+<a href="login.html" class="btn-gold">Login / Cadastro</a>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<main class="inner-main film-page">
+<section class="inner-hero">
+<span class="film-kicker">Cada película, uma solução</span>
+<h1 class="film-hero-title"><span>Conheça as vantagens</span><span class="gold-line">de cada tipo de película.</span></h1>
+<p class="film-hero-copy">Conheça opções de películas para veículos e residências, com foco em conforto, privacidade, proteção e economia.</p>
+</section>
+
+<div class="quality-grid">
+<div class="quality-card">
+<i class="fa-solid fa-shield-halved"></i>
+<strong>Qualidade Premium</strong>
+<span>Materiais de alta performance.</span>
+</div>
+<div class="quality-card">
+<i class="fa-solid fa-award"></i>
+<strong>Instalação Especializada</strong>
+<span>Profissionais qualificados.</span>
+</div>
+<div class="quality-card">
+<i class="fa-solid fa-circle-check"></i>
+<strong>Garantia Total</strong>
+<span>Garantia do produto e instalação.</span>
+</div>
+<div class="quality-card">
+<i class="fa-solid fa-headset"></i>
+<strong>Atendimento Personalizado</strong>
+<span>Solução para cada necessidade.</span>
+</div>
+</div>
+<section class="film-section" id="automotivo">
+<figure class="film-section-media">
+<img alt="Veículo com película escura aplicada nos vidros" loading="lazy" src="img/insulfilm/veiculos-insulfilm.png"/>
+<figcaption>Aplicação automotiva — veículo com película escura nos vidros.</figcaption>
+</figure>
+<div class="film-section-heading">
+<div class="section-icon"><i class="fa-solid fa-car"></i></div>
+<div>
+<h2>Para Veículos</h2>
+<p>Conforto, segurança e estilo para o seu dia a dia.</p>
+</div>
+</div>
+<div class="film-grid">
+<article class="film-card">
+<div class="film-card-head">
+<div>
+<h3>Película Fumê / Tingida</h3>
+<p class="film-purpose">Opção acessível, com visual escuro e privacidade.</p>
+</div>
+<span class="film-tag">Veículos</span>
+</div>
+<div class="film-benefits">
+<div class="benefit"><i class="fa-solid fa-eye-slash"></i><div><strong>Privacidade</strong><span>Mais discrição.</span></div></div>
+<div class="benefit"><i class="fa-solid fa-sun"></i><div><strong>Redução de luz</strong><span>Menos brilho solar.</span></div></div>
+<div class="benefit"><i class="fa-solid fa-dollar-sign"></i><div><strong>Custo-benefício</strong><span>Economia na escolha.</span></div></div>
+</div>
+</article>
+<article class="film-card">
+<div class="film-card-head">
+<div>
+<h3>Película Carbono</h3>
+<p class="film-purpose">Tecnologia com bom desempenho e durabilidade.</p>
+</div>
+<span class="film-tag">Veículos</span>
+</div>
+<div class="film-benefits">
+<div class="benefit"><i class="fa-solid fa-temperature-half"></i><div><strong>Controle de calor</strong><span>Reduz o calor interno.</span></div></div>
+<div class="benefit"><i class="fa-solid fa-shield-halved"></i><div><strong>Durabilidade</strong><span>Não desbota com o tempo.</span></div></div>
+<div class="benefit"><i class="fa-solid fa-eye"></i><div><strong>Visão interna</strong><span>Boa clareza de dentro para fora.</span></div></div>
+</div>
+</article>
+<article class="film-card">
+<div class="film-card-head">
+<div>
+<h3>Película Nano Cerâmica</h3>
+<p class="film-purpose">Alta tecnologia para máximo conforto.</p>
+</div>
+<span class="film-tag">Veículos</span>
+</div>
+<div class="film-benefits">
+<div class="benefit"><i class="fa-solid fa-sun"></i><div><strong>Rejeição de calor</strong><span>Bloqueia até 95% do calor solar.</span></div></div>
+<div class="benefit"><i class="fa-solid fa-shield-halved"></i><div><strong>Proteção UV</strong><span>Bloqueia até 99% dos raios UV.</span></div></div>
+<div class="benefit"><i class="fa-solid fa-gem"></i><div><strong>Sinal</strong><span>Não interfere em celular, GPS e pedágio.</span></div></div>
+</div>
+</article>
+<article class="film-card">
+<div class="film-card-head">
+<div>
+<h3>Película Metalizada</h3>
+<p class="film-purpose">Reflexão solar com ótimo desempenho térmico.</p>
+</div>
+<span class="film-tag">Veículos</span>
+</div>
+<div class="film-benefits">
+<div class="benefit"><i class="fa-solid fa-sun"></i><div><strong>Reflexão de calor</strong><span>Reduz a temperatura interna.</span></div></div>
+<div class="benefit"><i class="fa-solid fa-shield-halved"></i><div><strong>Proteção UV</strong><span>Bloqueia até 99% dos raios UV.</span></div></div>
+<div class="benefit"><i class="fa-solid fa-eye"></i><div><strong>Privacidade</strong><span>Mais conforto visual.</span></div></div>
+</div>
+</article>
+<article class="film-card">
+<div class="film-card-head">
+<div>
+<h3>Película de Segurança</h3>
+<p class="film-purpose">Mais proteção para pessoas e patrimônio.</p>
+</div>
+<span class="film-tag">Segurança</span>
+</div>
+<div class="film-benefits">
+<div class="benefit"><i class="fa-solid fa-shield-halved"></i><div><strong>Impacto</strong><span>Mantém os estilhaços presos.</span></div></div>
+<div class="benefit"><i class="fa-solid fa-lock"></i><div><strong>Resistência</strong><span>Dificulta invasões e reforça o vidro.</span></div></div>
+<div class="benefit"><i class="fa-solid fa-people-group"></i><div><strong>Proteção</strong><span>Mais segurança para os ocupantes.</span></div></div>
+</div>
+</article>
+</div>
+</section>
+<section class="film-section" id="residencial">
+<figure class="film-section-media">
+<img alt="Aplicação residencial de película em grandes janelas de uma residência" loading="lazy" src="img/insulfilm/residencial-insulfilm.png"/>
+<figcaption>Aplicação residencial — película aplicada em grandes áreas de vidro, com foco em privacidade, conforto e controle solar.</figcaption>
+</figure>
+<div class="film-section-heading">
+<div class="section-icon"><i class="fa-solid fa-house"></i></div>
+<div>
+<h2>Para Residências</h2>
+<p>Conforto térmico, privacidade e economia de energia.</p>
+</div>
+</div>
+<div class="film-grid">
+<article class="film-card">
+<div class="film-card-head">
+<div>
+<h3>Película Controle Solar</h3>
+<p class="film-purpose">Reduz o calor e protege o ambiente.</p>
+</div>
+<span class="film-tag">Residencial</span>
+</div>
+<div class="film-benefits">
+<div class="benefit"><i class="fa-solid fa-sun"></i><div><strong>Redução de calor</strong><span>Menos calor e uso de ar-condicionado.</span></div></div>
+<div class="benefit"><i class="fa-solid fa-shield-halved"></i><div><strong>Proteção UV</strong><span>Bloqueia até 99% dos raios UV.</span></div></div>
+<div class="benefit"><i class="fa-solid fa-dollar-sign"></i><div><strong>Economia</strong><span>Ajuda a reduzir o consumo de energia.</span></div></div>
+</div>
+</article>
+<article class="film-card">
+<div class="film-card-head">
+<div>
+<h3>Película Espelhada / Refletiva</h3>
+<p class="film-purpose">Privacidade diurna e controle solar.</p>
+</div>
+<span class="film-tag">Residencial</span>
+</div>
+<div class="film-benefits">
+<div class="benefit"><i class="fa-solid fa-eye"></i><div><strong>Privacidade</strong><span>Menos visão de fora durante o dia.</span></div></div>
+<div class="benefit"><i class="fa-solid fa-sun"></i><div><strong>Rejeição de calor</strong><span>Reflete a luz solar.</span></div></div>
+<div class="benefit"><i class="fa-solid fa-gem"></i><div><strong>Visual</strong><span>Acabamento moderno e sofisticado.</span></div></div>
+</div>
+</article>
+<article class="film-card">
+<div class="film-card-head">
+<div>
+<h3>Película Nano Cerâmica</h3>
+<p class="film-purpose">Alta tecnologia para máximo conforto.</p>
+</div>
+<span class="film-tag">Residencial</span>
+</div>
+<div class="film-benefits">
+<div class="benefit"><i class="fa-solid fa-sun"></i><div><strong>Rejeição de calor</strong><span>Bloqueia até 95% do calor solar.</span></div></div>
+<div class="benefit"><i class="fa-solid fa-shield-halved"></i><div><strong>Proteção UV</strong><span>Bloqueia até 99% dos raios UV.</span></div></div>
+<div class="benefit"><i class="fa-solid fa-eye"></i><div><strong>Sinal</strong><span>Não interfere em celular, GPS e pedágio.</span></div></div>
+</div>
+</article>
+<article class="film-card">
+<div class="film-card-head">
+<div>
+<h3>Película Jateada / Decorativa</h3>
+<p class="film-purpose">Privacidade com estilo e elegância.</p>
+</div>
+<span class="film-tag">Residencial</span>
+</div>
+<div class="film-benefits">
+<div class="benefit"><i class="fa-solid fa-eye-slash"></i><div><strong>Privacidade</strong><span>Oculta a visão sem escurecer totalmente.</span></div></div>
+<div class="benefit"><i class="fa-solid fa-palette"></i><div><strong>Desenhos</strong><span>Diversos padrões decorativos.</span></div></div>
+<div class="benefit"><i class="fa-solid fa-wand-magic-sparkles"></i><div><strong>Sofisticação</strong><span>Ideal para vidros e divisórias.</span></div></div>
+</div>
+</article>
+<article class="film-card">
+<div class="film-card-head">
+<div>
+<h3>Película de Segurança</h3>
+<p class="film-purpose">Mais proteção para pessoas e patrimônio.</p>
+</div>
+<span class="film-tag">Segurança</span>
+</div>
+<div class="film-benefits">
+<div class="benefit"><i class="fa-solid fa-shield-halved"></i><div><strong>Impacto</strong><span>Mantém os estilhaços presos.</span></div></div>
+<div class="benefit"><i class="fa-solid fa-hammer"></i><div><strong>Resistência</strong><span>Dificulta invasões e reforça o vidro.</span></div></div>
+<div class="benefit"><i class="fa-solid fa-people-group"></i><div><strong>Proteção</strong><span>Mais segurança para os ocupantes.</span></div></div>
+</div>
+</article>
+<article class="film-card">
+<div class="film-card-head">
+<div>
+<h3>Película Blackout / Whiteout</h3>
+<p class="film-purpose">Bloqueio de luz e máxima privacidade.</p>
+</div>
+<span class="film-tag">Residencial</span>
+</div>
+<div class="film-benefits">
+<div class="benefit"><i class="fa-solid fa-moon"></i><div><strong>Luz</strong><span>Bloqueio total da claridade.</span></div></div>
+<div class="benefit"><i class="fa-solid fa-eye-slash"></i><div><strong>Privacidade</strong><span>Impede a visão de dentro e de fora.</span></div></div>
+<div class="benefit"><i class="fa-solid fa-temperature-half"></i><div><strong>Conforto térmico</strong><span>Ajuda a reduzir o calor.</span></div></div>
+</div>
+</article>
+</div>
+</section>
+<section aria-label="Películas de segurança" class="safety-panel" id="seguranca">
+<figure class="film-section-media">
+<img alt="Fachada envidraçada com proteção e película de segurança" loading="lazy" src="img/insulfilm/pelicola_protetora.png"/>
+<figcaption>Película de segurança — Segura os estilhaços do vidro em caso de quebra ou rachadura..</figcaption>
+</figure>
+<h2>Películas para Segurança</h2>
+<p>Película voltada à proteção em caso de impacto ou quebra.</p>
+<div class="film-benefits">
+<div class="benefit"><i class="fa-solid fa-shield-halved"></i><div><strong>Proteção em caso de impacto</strong><span>Mantém estilhaços presos.</span></div></div>
+<div class="benefit"><i class="fa-solid fa-lock"></i><div><strong>Mais segurança</strong><span>Reforça a resistência do vidro.</span></div></div>
+<div class="benefit"><i class="fa-solid fa-people-group"></i><div><strong>Proteção para todos</strong><span>Mais proteção para os ocupantes.</span></div></div>
+</div>
+</section>
+<section aria-label="Insulfilm comercial" class="safety-panel commercial-section" id="comercial">
+<figure class="film-section-media">
+<img alt="Ambiente comercial moderno com grandes superfícies de vidro" loading="lazy" src="img/insulfilm/corporativo.png"/>
+<figcaption>Aplicação comercial — exemplo de ambiente corporativo com superfícies de vidro.</figcaption>
+</figure>
+<h2>Insulfilm Comercial</h2>
+<p>As películas para ambientes comerciais ajudam a melhorar o conforto, a privacidade e a proteção dos espaços, 
+    além de contribuir para uma aparência mais moderna e profissional. São indicadas para escritórios, lojas, clínicas, 
+    consultórios, condomínios, recepções e outros ambientes com grandes áreas envidraçadas.</p>
+    <div class="film-benefits">
+    
+<div class="benefit"><i class="fa-solid fa-eye-slash"></i><div><strong>Privacidade</strong><span>Opções que dificultam a visibilidade do interior, proporcionando mais discrição para funcionários, clientes e ambientes internos..</span></div></div>
+<div class="benefit"><i class="fa-solid fa-sun"></i><div><strong>Controle Solar</strong><span>Redução da incidência de luz solar e do desconforto causado pelo excesso de calor em ambientes internos.</span></div></div>
+<div class="benefit"><i class="fa-solid fa-lock"></i><div><strong>Mais Segurança</strong><span>Películas específicas para segurança podem ajudar a manter os fragmentos do vidro unidos em caso de quebra.</span></div></div>
+</section>
+</main>
+<footer class="footer">
+<div class="footer-container">
+<div class="footer-brand">
+<h3>RUAN INSULFILM</h3>
+<p>Proteção, Privacidade e Economia</p>
+</div>
+<div class="footer-social">
+<a aria-label="WhatsApp" href="#"><i class="fa-brands fa-whatsapp"></i></a>
+<a aria-label="Instagram" href="#"><i class="fa-brands fa-instagram"></i></a>
+<a aria-label="E-mail" href="#"><i class="fa-solid fa-envelope"></i></a>
+</div>
+<div class="footer-copy"><span>© 2026 RUAN INSULFILM - Rio de Janeiro</span></div>
+</div>
+</footer>
+<script src="darkmode.js"></script>
+</body>
+</html>
