@@ -1,0 +1,338 @@
+/* ============================================================
+   RUAN FILM - OUTROS SERVIÇOS (PPF E ENVELOPAMENTO)
+   ESTILO PADRONIZADO (COMPATÍVEL COM INDEX.CSS E DARKMODE.JS)
+   ============================================================ */
+
+/* Cabeçalho específico da página de serviços */
+.film-page .inner-hero {
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 85% 15%, rgba(212, 175, 55, 0.16), transparent 35%),
+        linear-gradient(145deg, var(--bg-hero, #131212), var(--bg-card, #131212));
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 2.75rem 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 12px 35px var(--shadow);
+}
+
+.film-kicker {
+    display: inline-block;
+    margin-bottom: .65rem;
+    color: var(--gold);
+    font-size: .74rem;
+    font-weight: 800;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+}
+
+.film-hero-title {
+    margin: 0 0 .7rem 0 !important;
+    font-family: var(--font-title);
+    font-size: clamp(1.8rem, 3.4vw, 2.7rem) !important;
+    font-weight: 800;
+    color: var(--text-main);
+}
+
+.film-hero-title span {
+    color: var(--text-main);
+}
+
+.film-hero-title .gold-line {
+    color: var(--gold);
+    display: block;
+}
+
+.film-hero-copy {
+    max-width: 780px !important;
+    margin: 0 !important;
+    color: var(--text-secondary);
+    font-size: .94rem !important;
+    line-height: 1.7;
+}
+
+/* ============================================================
+   GRID DE QUALIDADES / DESTAQUES SUPERIORES
+   ============================================================ */
+
+.quality-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: .8rem;
+    margin-bottom: 1.5rem;
+}
+
+.quality-card {
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    background: var(--bg-card);
+    box-shadow: 0 6px 18px var(--shadow);
+    transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.quality-card:hover {
+    border-color: var(--border-strong);
+    transform: translateY(-2px);
+    background: var(--bg-card-hover);
+}
+
+.quality-card i {
+    display: block;
+    margin-bottom: .45rem;
+    color: var(--gold);
+    font-size: 1.15rem;
+}
+
+.quality-card strong {
+    display: block;
+    margin-bottom: .22rem;
+    color: var(--text-main);
+    font-size: .72rem;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+}
+
+.quality-card span {
+    color: var(--text-secondary);
+    font-size: .68rem;
+    line-height: 1.45;
+}
+
+/* ============================================================
+   SEÇÕES PRINCIPAIS (PPF E ENVELOPAMENTO)
+   ============================================================ */
+
+.film-section {
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: 0 8px 24px var(--shadow);
+    scroll-margin-top: 100px;
+    transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.film-section-heading {
+    display: flex;
+    align-items: center;
+    gap: .9rem;
+    margin-bottom: 1.2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.film-section-heading .section-icon {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    flex: 0 0 44px;
+    border: 1px solid var(--gold-dark);
+    border-radius: 10px;
+    color: var(--gold);
+    font-size: 1.15rem;
+    background: rgba(212, 175, 55, .06);
+}
+
+.film-section-heading h2 {
+    margin: 0;
+    color: var(--text-main);
+    font-family: var(--font-title);
+    font-size: clamp(1.25rem, 2.3vw, 1.6rem);
+    font-weight: 700;
+}
+
+.film-section-heading p {
+    margin: .2rem 0 0;
+    color: var(--text-secondary);
+    font-size: .8rem;
+    line-height: 1.5;
+}
+
+/* ============================================================
+   IMAGENS DE APOIO / MÍDIA DAS SEÇÕES
+   ============================================================ */
+
+.film-section-media {
+    margin: 0 0 1.25rem;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--bg-card);
+    box-shadow: 0 8px 24px var(--shadow);
+}
+
+.film-section-media img {
+    display: block;
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.film-section-media figcaption {
+    padding: .65rem 1rem;
+    color: var(--text-secondary);
+    font-size: .72rem;
+    line-height: 1.45;
+    border-top: 1px solid var(--border-light);
+    background: rgba(212, 175, 55, .025);
+}
+
+/* ============================================================
+   CARDS DE SERVIÇOS E BENEFÍCIOS
+   ============================================================ */
+
+.film-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.film-card {
+    padding: 1.15rem;
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    background: linear-gradient(145deg, rgba(212, 175, 55, .035), transparent);
+    transition: border-color 0.2s ease, transform 0.2s ease, background 0.2s ease;
+}
+
+.film-card:hover {
+    border-color: var(--border-strong);
+    transform: translateY(-1px);
+    background: linear-gradient(145deg, rgba(212, 175, 55, .06), transparent);
+}
+
+.film-card-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: .9rem;
+}
+
+.film-card h3 {
+    margin: 0;
+    color: var(--gold);
+    font-family: var(--font-title);
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.film-card .film-purpose {
+    margin: .3rem 0 0;
+    color: var(--text-secondary);
+    font-size: .78rem;
+    line-height: 1.55;
+}
+
+.film-tag {
+    flex-shrink: 0;
+    padding: .3rem .6rem;
+    border: 1px solid var(--gold-dark);
+    border-radius: 999px;
+    color: var(--gold);
+    font-size: .65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    background: rgba(212, 175, 55, 0.05);
+}
+
+.film-benefits {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: .75rem;
+}
+
+.benefit {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: .6rem;
+    align-items: start;
+    padding: .7rem;
+    border-left: 1px solid var(--border-light);
+}
+
+.benefit:first-child {
+    border-left: 0;
+}
+
+.benefit i {
+    color: var(--gold);
+    font-size: .95rem;
+    margin-top: .08rem;
+}
+
+.benefit strong {
+    display: block;
+    margin-bottom: .2rem;
+    color: var(--text-main);
+    font-size: .7rem;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+}
+
+.benefit span {
+    color: var(--text-secondary);
+    font-size: .7rem;
+    line-height: 1.45;
+}
+
+/* ============================================================
+   RESPONSIVIDADE (TABLETS E DISPOSITIVOS MÓVEIS)
+   ============================================================ */
+
+@media (max-width: 900px) {
+    .film-benefits {
+        grid-template-columns: 1fr;
+    }
+    
+    .benefit,
+    .benefit:first-child {
+        border-left: 0;
+        border-top: 1px solid var(--border-light);
+        padding-top: .75rem;
+    }
+    
+    .benefit:first-child {
+        border-top: 0;
+        padding-top: .2rem;
+    }
+    
+    .quality-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .film-page .inner-hero {
+        text-align: center;
+        padding: 2rem 1.1rem;
+    }
+    
+    .film-hero-copy {
+        margin: 0 auto !important;
+    }
+    
+    .film-section {
+        padding: 1rem;
+    }
+    
+    .film-card-head {
+        flex-direction: column;
+        gap: .5rem;
+    }
+    
+    .quality-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .film-section-media img {
+        height: 220px;
+    }
+}
